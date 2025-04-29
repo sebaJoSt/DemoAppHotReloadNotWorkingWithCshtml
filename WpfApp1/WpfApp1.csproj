@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="EmailTemplates\BackupOxygenEmailTemplate.cshtml" />
+    <None Remove="EmailTemplates\ExampleEmailTemplate.cshtml" />
+    <None Remove="EmailTemplates\LoggingErrorSingleEmailTemplate.cshtml" />
+    <None Remove="EmailTemplates\LoggingErrorTableEmailTemplate.cshtml" />
+    <None Remove="EmailTemplates\LoggingWarningTableEmailTemplate.cshtml" />
+    <None Remove="EmailTemplates\SimpleMessageEmailTemplate.cshtml" />
+    <None Remove="EmailTemplates\ViolationEmailTemplate.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="EmailTemplates\BackupOxygenEmailTemplate.cshtml" />
+    <EmbeddedResource Include="EmailTemplates\ExampleEmailTemplate.cshtml" />
+    <EmbeddedResource Include="EmailTemplates\LoggingErrorSingleEmailTemplate.cshtml" />
+    <EmbeddedResource Include="EmailTemplates\LoggingErrorTableEmailTemplate.cshtml" />
+    <EmbeddedResource Include="EmailTemplates\LoggingWarningTableEmailTemplate.cshtml" />
+    <EmbeddedResource Include="EmailTemplates\SimpleMessageEmailTemplate.cshtml" />
+    <EmbeddedResource Include="EmailTemplates\ViolationEmailTemplate.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RazorEngineCore" Version="2024.4.1" />
+  </ItemGroup>
+
+</Project>
